@@ -198,28 +198,28 @@ enum ftState {
 static char const *getDataPath(unsigned cpu) {
 	switch (cpu & 0xff000) {
 		case 0x63000:
-			return "/etc/devregs_imx6q.dat" ;
+			return "./devregs_imx6q.dat" ;
 		case 0x61000:
-			return "/etc/devregs_imx6dls.dat" ;
+			return "./devregs_imx6dls.dat" ;
 		case 0x53000:
-			return "/etc/devregs_imx53.dat" ;
+			return "./devregs_imx53.dat" ;
 	}
 	switch (cpu) {
 	case 0x10:
-		return "/etc/devregs_imx6q.dat";
+		return "./devregs_imx6q.dat";
 	case 0x51:
 	case 0x5:
-		return "/etc/devregs_imx51.dat";
+		return "./devregs_imx51.dat";
 	case 0x7:
-		return "/etc/devregs_imx7d.dat";
+		return "./devregs_imx7d.dat";
 	case 0x81:
-		return "/etc/devregs_imx8mq.dat";
+		return "./devregs_imx8mq.dat";
 	case 0x82:
-		return "/etc/devregs_imx8mm.dat";
+		return "./devregs_imx8mm.dat";
 	default:
 		printf("unsupported CPU type: %x\n", cpu);
 	}
-	return "/etc/devregs.dat" ;
+	return "./devregs.dat" ;
 }
 
 static struct reglist_t const *registerDefs(unsigned cputype = 0){
